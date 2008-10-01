@@ -1,0 +1,38 @@
+! xrdb -merge .Xresources,
+
+! Xft
+Xft.dpi:96
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+
+! Emacs.
+Emacs.FontBackend: xft
+emacs.menuBar:off
+emacs.verticalScrollBars:off
+emacs.toolBar:off
+emacs.internalBorder:0
+emacs.BorderWidth:0
+!emacs.useXIM:off
+!emacs*Foreground: 
+!emacs*Background: grey90
+!emacs*pointerColor: red
+emacs*geometry: 100x30
+!Emacs.Font: Bitstream Vera Sans Mono-13
+!Emacs.Font: Monaco-14
+
+!fontforge.FontView.FontFamily:wenquanyi bitmap song
+Rxvt.font:xft:Vera Sans YuanTi Mono :size=10,xft:Monospace:size=10
+!Rxvt.font:xft:Monaco:size=10,xft:Vera Sans YuanTi Mono:size=10
+!Rxvt.font:xft:Monaco:size=10,xft:Micorosoft YaHei:size=10
+!Rxvt.font:xft:Bitstream Vera Sans Mono:size=10,xft:Microsoft YaHei:size=10
+!Rxvt.font:xft:YaHei Cosolas Hybrid:size=10
+Rxvt.multichar_encoding:utf-8
+Rxvt.geometry:80x30
+!Rxvt.foreground:#98fb98
+!Rxvt.background:black
+!Rxvt.transparency:155
+Rxvt.scrollBar:false
+Rxvt.saveLines:10000
+Rxvt.preeditType:Root
+
