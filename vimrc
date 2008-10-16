@@ -1,3 +1,5 @@
+" I got to clean my vimrc file someday
+" add all plugins to rep
 " gerneral
 syntax on
 set nocompatible " get out of vi's compatible mode.
