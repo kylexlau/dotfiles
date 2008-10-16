@@ -2,7 +2,9 @@
 
 " set the X11 font to use
 " set guifont=-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
-set guifont=Monaco\ 10,\ Micorsoft\ YaHei\ 10
+" set guifont=Monaco\ 10,\ Micorsoft\ YaHei\ 10
+"set guifont=Consolas\ 14,\ Micorsoft\ YaHei\ 14
+set guifont=Consolas\ 14,\ Micorsoft\ YaHei\ 14
 colo murphy " colo=colors, elflord, torte, desert, murphy
 
 " UI

@@ -38,21 +38,10 @@ set smartcase " smartcase
 " UI
 set go=mT " get rid of munubar, toolbar, and scrollbal
 " au GUIEnter * simalt ~x  " fullscreen for Windows
-set nu " show line number
+" set nu  show line number
 set ru " ru=ruler
 set showmatch "show matching bracets
 set laststatus=0 " status line mode
-
-" gui font, set to .gvimrc
-"if has("gui_running")
-"        if has("gui_gtk2")
-"            set guifont=Monaco\ 10
-"        elseif has("x11")
-"            set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-"        else
-"            set guifont=Courier_New:h11:cDEFAULT
-"        endif
-"endif
 
 " Mapping
 map <Space> <C-D>

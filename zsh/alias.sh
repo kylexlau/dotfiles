@@ -1,10 +1,9 @@
 # aliases
+alias net='sudo /etc/init.d/networking restart'
+alias ed='emacs --daemon'
+alias e='emacsclient -c --no-wait'
 alias sc='screen'
 alias wgetall="wget -c -r -np -k -L -p"
-alias info="info --vi-keys"
-alias et="emacsclient -t"
-alias e='emacsclient'
-alias sx='ssh-agent startx &'
 alias du1='du -h --max-depth=1'
 
 # ls
@@ -31,5 +30,4 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
-
 

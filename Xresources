@@ -17,7 +17,7 @@ emacs.BorderWidth:0
 !emacs*Foreground: 
 !emacs*Background: grey90
 !emacs*pointerColor: red
-emacs*geometry: 100x30
+emacs*geometry: 80x40
 !Emacs.Font: Bitstream Vera Sans Mono-13
 !Emacs.Font: Monaco-14
 
