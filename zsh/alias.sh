@@ -1,7 +1,7 @@
 # aliases
 alias net='sudo /etc/init.d/networking restart'
 alias ed='emacs --daemon'
-alias e='emacsclient -c --no-wait'
+#alias e="emacsclient -c --no-wait -e '(load-file "~/emacs/gui.el")'"
 alias sc='screen'
 alias wgetall="wget -c -r -np -k -L -p"
 alias du1='du -h --max-depth=1'

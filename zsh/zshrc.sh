@@ -18,7 +18,7 @@ compinit
 zstyle ':completion::complete:*' use-cache 1
 
 # source
-sdir=~/dot-files/zsh
+sdir=~/dot/zsh
 source $sdir/alias.sh
 source $sdir/env.sh
 source $sdir/func.sh
