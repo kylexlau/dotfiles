@@ -3,8 +3,8 @@
 # eval `ssh-agent`
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 setopt appendhistory extendedglob
 unsetopt beep
@@ -22,3 +22,4 @@ sdir=~/dot/zsh
 source $sdir/alias.sh
 source $sdir/env.sh
 source $sdir/func.sh
+
