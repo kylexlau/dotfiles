@@ -26,8 +26,8 @@ alias pg='ps aux | grep'
 alias bc='bc -ql'
 
 # security
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias ln='ln -i'
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+#alias ln='ln -i'
 
