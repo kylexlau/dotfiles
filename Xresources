@@ -22,13 +22,14 @@ emacs*geometry: 80x40
 !Emacs.Font: Monaco-14
 
 !fontforge.FontView.FontFamily:wenquanyi bitmap song
-Rxvt.font:xft:Vera Sans YuanTi Mono :size=10,xft:Monospace:size=10
+Rxvt.font:xft:Monospace:size=10
+!Rxvt.font:xft:Vera Sans YuanTi Mono :size=10,xft:Monospace:size=10
 !Rxvt.font:xft:Monaco:size=10,xft:Vera Sans YuanTi Mono:size=10
 !Rxvt.font:xft:Monaco:size=10,xft:Micorosoft YaHei:size=10
 !Rxvt.font:xft:Bitstream Vera Sans Mono:size=10,xft:Microsoft YaHei:size=10
 !Rxvt.font:xft:YaHei Cosolas Hybrid:size=10
 Rxvt.multichar_encoding:utf-8
-Rxvt.geometry:80x30
+Rxvt.geometry:90x30
 !Rxvt.foreground:#98fb98
 !Rxvt.background:black
 !Rxvt.transparency:155
