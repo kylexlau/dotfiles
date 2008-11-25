@@ -1,4 +1,7 @@
 # shell fuctions library
+# find what's new in a directory
+lsnew() { ls -lt ${1+"$@"} | head -20; }
+
 #Usage: put_key servername
 # put rsa key to server
 function put_key(){

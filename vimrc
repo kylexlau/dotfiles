@@ -13,7 +13,7 @@ set history=49 " sets how many lines of history VIM har to remember
 set showcmd " display incomplete commands
 
 " formating
-" set wrap " wrap lines, or nowrap.
+set wrap " wrap lines, or nowrap.
 set formatoptions+=mM
 set tw=70  " textwidth
 
