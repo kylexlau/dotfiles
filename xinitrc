@@ -4,8 +4,8 @@ xmodmap ~/.Xmodmap
 fcitx &
 thunar --daemon &
 emacs --daemon
-/opt/google/desktop/bin/gdlinux start
+#/opt/google/desktop/bin/gdlinux start
 #nm-applet --sm-disable
-clipboard-daemon 
+clipboard-daemon  &
 exec gnome-session
 exec emerald --replace
