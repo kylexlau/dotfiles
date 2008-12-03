@@ -1,0 +1,4 @@
+#! /bin/sh
+
+echo "Kyle X. Lau"
+echo `date +"%F"`

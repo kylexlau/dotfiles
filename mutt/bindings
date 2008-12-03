@@ -1,0 +1,16 @@
+# 光标行为
+
+# 阅读正文时的光标行为
+bind pager <pageup>    previous-entry
+bind pager <pagedown>  next-entry
+bind pager <up>        previous-line
+bind pager k           previous-line
+bind pager <down>      next-line
+bind pager j           next-line
+bind pager <backspace> previous-line
+
+# 浏览首页时的光标行为
+bind index <up>        previous-entry
+bind index <down>      next-entry
+bind index <left>      previous-line
+bind index <right>     next-line

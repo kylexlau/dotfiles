@@ -1,0 +1,33 @@
+#set mbox_type="Maildir" # 信箱类型
+#set folder="~/.maildir" # 信箱目录
+#set spoolfile="~/.maildir/" # 默认使用的信箱
+
+set mbox_type="mbox" # 信箱类型
+#set folder="~/.maildir" # 信箱目录
+set spoolfile="/var/spool/mail/kyle" # 默认使用的信箱
+
+# 邮箱列表
+mailboxes personal
+#mailboxes emacs-devl
+# mailboxes !
+# mailboxes =personal
+# mailboxes =company
+# mailboxes =debian-zh
+# mailboxes =kde-zh
+# mailboxes =planet
+# mailboxes =shlug
+
+# 邮件列表选项，按 "r" 会回信到别人的私人信箱，按 "L"可以回复到邮件列表地址
+#subscribe emca
+# subscribe desktop@sw...
+# subscribe team.nj@sw...
+# subscribe ubuntu-zh@lists.ubuntu.com
+# subscribe fcitx-dev@googlegroups.com
+# subscribe kde-china@kde.org
+# subscribe openrays@openrays.org
+# subscribe wikizh-l@lists.wikimedia.org
+# subscribe directfb-users@directfb.org
+# subscribe debian-boot@lists.debian.org
+# subscribe debian-mips@lists.debian.org
+# subscribe debian-chinese-gb@lists.debian.org
+# subscribe shlug@googlegroups.com

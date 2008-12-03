@@ -1,0 +1,31 @@
+# 信箱目录
+set folder="imaps://{{{neo@matrix.org}}}@{{{imap.matrix.org}}}"
+# 默认使用的信箱
+set spoolfile="imaps://{{{neo@matrix.org}}}@{{{imap.matrix.org}}}/INBOX"
+# 外发的信件会自动保存，不必再设
+set record=""
+# 保持连接
+set imap_keepalive=120
+# 检查邮件
+set mail_check=300
+# 根据不同邮箱自动变换发件人
+folder-hook 'matrix.org' \
+   'set from="{{{Neo}}} <{{{neo@matrix.org}}}>" ;\
+    set crypt_autosign=yes'
+#folder-hook 'world.org' \
+#   'set from="{{{Anderson}}} <{{{ads@world.org}}}>" ;\
+#    set crypt_autosign=no'
+# 自动选择登录账号
+account-hook imaps://{{{neo@matrix.org}}}@{{{imap.gmail.org}}}/ \
+   'set folder="imaps://{{{neo@matrix.org}}}@{{{imap.gmail.org}}}/" ;\
+    set spoolfile="imaps://{{{neo@matrix.org}}}@{{{imap.gmail.org}}}/INBOX" ;\
+    set imap_user="{{{neo@matrix.org}}}" ;\
+    set imap_pass="{{{red}}}"'
+#account-hook imaps://{{{ads@world.org}}}@{{{imap.gmail.org}}}/ \
+#   'set folder="imaps://{{{ads@world.org}}}@{{{imap.gmail.org}}}/" ;\
+#    set spoolfile="imaps://{{{ads@world.org}}}@{{{imap.gmail.org}}}/INBOX" ;\
+#    set imap_user="{{{ads@world.org}}}" ;\
+#    set imap_pass="{{{blue}}}"'
+# 邮箱列表
+mailboxes imaps://{{{neo@matrix.org}}}@{{{imap.gmail.org}}}/INBOX
+#mailboxes imaps://{{{ads@world.org}}}@{{{imap.gmail.org}}}/INBOX

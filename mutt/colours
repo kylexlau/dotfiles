@@ -1,0 +1,23 @@
+# 自定义界面颜色
+
+# --   --        前景色     背景色
+color normal     default     default  # 普通文字
+color status     default     default  # 状态栏
+color indicator  red         yellow   # 当前行
+color hdrdefault default     default  # 信头
+color attachment yellow      default  # 附件
+color quoted     green       default  # 引用
+color tree       yellow      default  # 线索
+color message    blue        default  # 提示信息
+color signature  cyan        default  # 签名
+
+# 特殊邮件头
+color header     magenta     default "^From:"
+color header     magenta     default "^Date:"
+color header     red         yellow  "^Subject:"
+
+# 特殊状态
+color index      white       red     "~F"  # 长期标记
+color index      white       blue    "~T"  # 短期标记
+color index      yellow      default "~D"  # 删除
+color index      blue        default "~U"  # 未读信件

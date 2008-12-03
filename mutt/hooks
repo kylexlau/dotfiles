@@ -1,0 +1,8 @@
+# hook 的执行顺序是先声明、后调用
+
+# 1. 启动后立即使用折叠方式显示邮件
+folder-hook . push "<collapse-all><first-entry><last-entry><next-unread>"
+
+# 2. 外发的信件保存在当前信箱，突出话题完整性
+folder-hook . set record="^"
+
