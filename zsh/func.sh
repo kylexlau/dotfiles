@@ -1,4 +1,8 @@
 # shell fuctions library
+# print ip address
+
+myip() { ifconfig -a | perl -ne 'if ( m/^\s*inet (?:addr:)?([\d.]+).*?cast/ ) { print qq($1\n); exit 0; }'}
+
 # find what's new in a directory
 lsnew() { ls -lt ${1+"$@"} | head -20; }
 
