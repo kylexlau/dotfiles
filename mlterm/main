@@ -19,6 +19,9 @@ use_xim=true
 logsize=1280
 geometry=90x30
 
+mod_meta_key=alt
+mod_meta_mode=esc
+
 # tabsize=8
 # open_xim_in_startup=true
 # use_login_shell=false
