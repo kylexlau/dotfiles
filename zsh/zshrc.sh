@@ -22,7 +22,3 @@ sdir=~/dot/zsh
 source $sdir/alias.sh
 source $sdir/env.sh
 source $sdir/func.sh
-
-export XMODIFIERS=@im=SCIM    #case matters for this variable!
-export GTK_IM_MODULE=xim
-export QT_IM_MODULE=xim
