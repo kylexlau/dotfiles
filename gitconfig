@@ -2,6 +2,11 @@
 	name = kylexlau
 	email = kylexlau@gmail.com
 
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
 [alias]
 	st = status
 	ci = commit
