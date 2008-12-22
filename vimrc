@@ -54,15 +54,6 @@ map <F5> <ESC>i<C-R>=strftime（"%Y-%m-%d"）<ESC><ESC>` " insert time stamp
 
 " Functions
 "  imput method close when press Esc
-" :inoremap <ESC> <ESC>:set iminsert=0<CR>
+:inoremap <ESC> <ESC>:set iminsert=0<CR>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm " remove the Windows ^M
 
-" Comments
-" , #perl # comments
-map ,# :s/^/#/<CR>
-" ,/ C/C++/C#/Java // comments
-map ,/ :s/^/\/\//<CR>
-" ,< HTML comment
-map ,< :s/^\(.*\)$/<!-- \1 -->/<CR><Esc>:nohlsearch<CR>
-" c++ java style comments
-map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR><Esc>:nohlsearch<CR>

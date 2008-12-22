@@ -1,4 +1,5 @@
 # aliases
+alias gj='sudo shutdown -h now'
 alias th='thunar .'
 alias net='sudo /etc/init.d/networking restart'
 alias e="emacsclient -c --no-wait"
