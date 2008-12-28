@@ -17,7 +17,7 @@ bg_color=black
 ENCODING=utf8
 use_xim=true
 logsize=1280
-geometry=80x30
+geometry=80x25
 
 mod_meta_key=alt
 mod_meta_mode=esc

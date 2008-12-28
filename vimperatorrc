@@ -1,4 +1,5 @@
-set guioptions=mb
-set titlestring=Kyle
+"set guioptions=mb
+set guioptions=m
+set titlestring=vifire
 set vb
-"set visualbellstyle
+set visualbellstyle

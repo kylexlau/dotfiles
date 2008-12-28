@@ -14,7 +14,7 @@ set showcmd " display incomplete commands
 
 " formating
 set wrap " wrap lines, or nowrap.
-set formatoptions+=mM
+set formatoptions=qMm " tcqMm :h fo-tables
 set tw=70  " textwidth
 
 " encoding
@@ -54,6 +54,4 @@ map <F5> <ESC>i<C-R>=strftime（"%Y-%m-%d"）<ESC><ESC>` " insert time stamp
 
 " Functions
 "  imput method close when press Esc
-:inoremap <ESC> <ESC>:set iminsert=0<CR>
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm " remove the Windows ^M
-
