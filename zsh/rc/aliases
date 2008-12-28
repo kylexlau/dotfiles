@@ -1,0 +1,60 @@
+##
+##  Aliases
+##
+
+alias gj='sudo shutdown -h now'
+alias th='thunar .'
+alias net='sudo /etc/init.d/networking restart'
+alias e="emacsclient -c --no-wait"
+alias emd='emacs --daemon'
+alias sc='screen'
+alias wgetall="wget -c -r -np -k -L -p"
+alias du1='du -h --max-depth=1'
+
+# Processes
+case ${OS} in
+    freebsd|darwin)
+    alias psa='ps -wwaxo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
+    alias psme='ps -U ${LOGNAME} -wwaxo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
+    alias psta='pstree -g2 -w' 
+    alias pstme='pstree -g2 -w -u${LOGNAME}'
+    ;;
+    linux-gnu)
+    alias psa='ps -eo user,ruser,pid,ppid,pri,pcpu,pmem,vsize,rss,tt,start,args'
+    alias psme='psa | grep -E "^USER|${LOGNAME}"'
+    alias psta='pstree -aphlnu'
+    alias pstme='pstree -aphlnu ${LOGNAME}'
+    ;;
+esac
+
+# Vim
+alias v="vim"
+alias vi="vim"
+alias m="mvim"
+
+# Directory listings
+alias ls='ls --color=auto'  # GNU version only
+alias la='ls -al'
+alias ll='ls -l'
+alias lsa='ls -ld .*'
+
+# Directory navigation
+alias ..='cd ..'
+alias d='dirs -v'
+function pu { pushd $1 > /dev/null; dirs -v; }
+alias po='popd > /dev/null; dirs -v'
+alias 1='pu'
+alias 2='pu -2'
+alias 3='pu -3'
+alias 4='pu -4'
+alias 5='pu -5'
+alias 6='pu -6'
+alias 7='pu -7'
+alias 8='pu -8'
+alias 9='pu -9'
+
+# Misc
+alias grep='grep --colour=auto' # GNU version only
+alias funcs='declare -f'
+
+# vim: ft=zsh
