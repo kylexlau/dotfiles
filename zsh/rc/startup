@@ -6,6 +6,7 @@
 procs=( {ssh,gpg}-agent )
 for p in $procs ; do
 	local -a pids
+	# findpids: zsh's builtin
 	pids=($(findpids $p))
 	if (( $#pids )) ; then
 		printf "%d %s running: [%s]\n" $#pids "${p}(s)" "$pids"

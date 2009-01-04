@@ -2,11 +2,13 @@
 xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 fcitx &
-#thunar --daemon &
+clipboard-daemon  &
 #emacs --daemon
+#exec /usr/local/bin/stumpwm
+
+#thunar --daemon &
 #/opt/google/desktop/bin/gdlinux start
 #nm-applet --sm-disable
-clipboard-daemon  &
-#exec gnome-session
-exec xfce4-session
-exec emerald --replace
+exec gnome-session
+#exec xfce4-session
+#exec emerald --replace

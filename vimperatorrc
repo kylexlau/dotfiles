@@ -1,5 +1,5 @@
 "set guioptions=mb
-set guioptions=m
+set guioptions=mb
 set titlestring=vifire
 set vb
 set visualbellstyle
