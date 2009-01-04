@@ -1,0 +1,41 @@
+; (reload) reload stumpwm
+; (loadrc) load .stumpwmrc
+
+;; firefox
+(defcommand firefox () ()
+  "Start/Switchto Firefox."
+  (run-or-raise "firefox" '(:class "Firefox")))
+(define-key *root-map* (kbd "f") "firefox")
+(define-key *root-map* (kbd "C-f") "firefox")
+
+;; mlterm
+(defcommand mlterm () ()
+  "Start/switch to Mlterm."
+  (run-or-raise "mlterm" '(:title "mlterm")))
+(define-key *root-map* (kbd "m") "mlterm")
+(define-key *root-map* (kbd "C-m") "mlterm")
+(define-key *root-map* (kbd "c") "lastmsg")
+(define-key *root-map* (kbd "C-c") "lastmsg")
+
+;; colon
+(define-key *root-map* (kbd "C-;") "colon")
+(define-key *root-map* (kbd ":") "exec")
+
+;; Message window ("The Bar")
+(set-bg-color "Yellow")
+(set-fg-color "Black")
+(set-border-color "Red")
+(set-msg-border-width 5)
+(setf *message-window-padding* 20)
+(setf *maxsize-border-width* 3)
+(setf *normal-border-width* 3)
+(setf *window-border-style* :thick)
+(setf *transient-border-width* 5) ; popups
+(setf *mouse-focus-policy* :sloppy)
+(set-focus-color "Blue")
+(setf *message-window-gravity* :left)
+(setf *input-window-gravity* :left)
+(setf *timeout-wait* 3)
+
+;(run-shell-command "emacs -d")
+(run-shell-command "/home/kyle/bin/nm-app")
