@@ -1,5 +1,17 @@
-; (reload) reload stumpwm
-; (loadrc) load .stumpwmrc
+;; -*-lisp-*-
+;; .stumpwmrc --- Stumpwm customizations
+
+;; set-font
+(set-font "-wenquanyi-wenquanyi zenhei-medium-r-normal--0-0-0-0-p-0-iso10646-1")
+
+;; Declare what this file is for.
+(in-package :stumpwm)
+
+;; debug level
+(setf stumpwm::*debug-level* 10)
+
+;; load modules
+(load "/home/kyle/.stumpwm.d/surfraw.lisp")
 
 ;; firefox
 (defcommand firefox () ()
@@ -7,6 +19,13 @@
   (run-or-raise "firefox" '(:class "Firefox")))
 (define-key *root-map* (kbd "f") "firefox")
 (define-key *root-map* (kbd "C-f") "firefox")
+
+;; stardict
+(defcommand stardict () ()
+  "Start/Switchto Startdict."
+  (run-or-raise "stardict" '(:class "Stardict")))
+(define-key *root-map* (kbd "d") "stardict")
+(define-key *root-map* (kbd "C-d") "stardict")
 
 ;; mlterm
 (defcommand mlterm () ()
@@ -21,21 +40,59 @@
 (define-key *root-map* (kbd "C-;") "colon")
 (define-key *root-map* (kbd ":") "exec")
 
-;; Message window ("The Bar")
-(set-bg-color "Yellow")
+;; Customize modeline.
+(setf *screen-mode-line-format* (list
+                                 '(:eval (run-shell-command "date +%H:%M | tr -d '\\n'" t))
+                                 " | %w")
+      *mode-line-foreground-color* "white"
+      *mode-line-background-color* "black"
+      *mode-line-border-color* "white"
+      *mode-line-position* :bottom
+      *mode-line-border-width* 1
+      *mode-line-timeout* 1
+      *mode-line-pad-x* 1
+      *mode-line-pad-y* 1
+      )
+
+(toggle-mode-line (current-screen)
+		  (current-head))
+
+;; message and input window
+(set-bg-color "Gray")
 (set-fg-color "Black")
 (set-border-color "Red")
-(set-msg-border-width 5)
-(setf *message-window-padding* 20)
-(setf *maxsize-border-width* 3)
-(setf *normal-border-width* 3)
-(setf *window-border-style* :thick)
-(setf *transient-border-width* 5) ; popups
-(setf *mouse-focus-policy* :sloppy)
+(set-msg-border-width 1)
 (set-focus-color "Blue")
-(setf *message-window-gravity* :left)
-(setf *input-window-gravity* :left)
-(setf *timeout-wait* 3)
 
-;(run-shell-command "emacs -d")
+(setf *message-window-padding* 20
+      *maxsize-border-width* 3
+      *normal-border-width* 3
+      *window-border-style* :thick
+      *transient-border-width* 2
+      *mouse-focus-policy* :sloppy
+      *message-window-gravity* :top-right
+      *input-window-gravity* :top-right
+      *timeout-wait* 5)
+
+;; Display the keysequence in progress
+(defun key-press-hook (key key-seq cmd)
+  (declare (ignore key))
+  (unless (eq *top-map* *resize-map*)
+    (let ((*message-window-gravity* :bottom-right))
+      (message "Key sequence: ~A~%==> ~A"
+               (print-key-seq (reverse key-seq)) cmd))))
+
+(defmacro replace-hook (hook fn)
+  `(remove-hook ,hook ,fn)
+  `(add-hook ,hook ,fn))
+
+(replace-hook *key-press-hook* 'key-press-hook)
+
+;; shell command
 (run-shell-command "/home/kyle/bin/nm-app")
+
+;; Local Variables: **
+;; mode:lisp **
+;; mode:stumpwm **
+;; outline-regexp: ";;; " **
+;; End: **
