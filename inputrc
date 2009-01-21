@@ -14,7 +14,7 @@
 
 set input-meta on
 set output-meta on
-set convert-meta off
+set convert-meta on
 set bell-style visible
 
 # some defaults / modifications for the emacs mode

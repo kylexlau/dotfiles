@@ -1,5 +1,4 @@
-"set guioptions=mb
 set guioptions=mb
-set titlestring=vifire
+set titlestring=vim-fire
 set vb
 set visualbellstyle

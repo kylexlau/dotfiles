@@ -2,7 +2,7 @@
 ;; .stumpwmrc --- Stumpwm customizations
 
 ;; set-font
-(set-font "-wenquanyi-wenquanyi zenhei-medium-r-normal--0-0-0-0-p-0-iso10646-1")
+(set-font "lucidasans-12")
 
 ;; Declare what this file is for.
 (in-package :stumpwm)
@@ -47,7 +47,7 @@
       *mode-line-foreground-color* "white"
       *mode-line-background-color* "black"
       *mode-line-border-color* "white"
-      *mode-line-position* :bottom
+      *mode-line-position* :top
       *mode-line-border-width* 1
       *mode-line-timeout* 1
       *mode-line-pad-x* 1
@@ -70,8 +70,8 @@
       *window-border-style* :thick
       *transient-border-width* 2
       *mouse-focus-policy* :sloppy
-      *message-window-gravity* :top-right
-      *input-window-gravity* :top-right
+      *message-window-gravity* :bottom-right
+      *input-window-gravity* :bottom-right
       *timeout-wait* 5)
 
 ;; Display the keysequence in progress

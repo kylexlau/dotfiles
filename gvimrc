@@ -11,7 +11,7 @@
 "colo murphy " colo=colors, elflord, torte, desert, murphy
 
 " UI
-"set go-=m "Remove menubar
+set go-=m "Remove menubar
 set go-=T "Remove toolbar, go=guioption"
 set go-=r "Remove v_scroll bar
 
